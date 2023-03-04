@@ -47,9 +47,9 @@ class GA(object):
         while len(new_pop) < self.pop_size:
             index1, index2 = random.sample(list(range(10, self.pop_size)), 2)
             if rank(fuzzy_fitness[index1], fuzzy_fitness[index2]) == fuzzy_fitness[index1]:
-                new_pop.append(pop[index2])
+                new_pop.append(pop2[index2])
             else:
-                new_pop.append(pop[index1])
+                new_pop.append(pop2[index1])
         return np.array(new_pop)
 
     def crossover_machine(self, pop_machine):
